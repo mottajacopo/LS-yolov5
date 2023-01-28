@@ -3,5 +3,5 @@
 	url = https://github.com/ultralytics/yolov5.git
 [submodule "label-studio-ml-backend"]
 	path = label-studio-ml-backend
-	url = https://github.com/heartexlabs/label-studio-ml-backend
+	url = https://github.com/heartexlabs/label-studio-ml-backend.git
 
