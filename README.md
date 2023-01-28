@@ -1,4 +1,7 @@
 # Label Studio Yolov5 ML Backend
+This repo allow you tu use yolov5 models in label studio ml backend.
+
+> **_NOTE:_**  At the moment only auto labeling using pre-trained models is supported. Training not yet implemented.
 
 Clone repostory with submodules
 ```shell
