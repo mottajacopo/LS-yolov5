@@ -51,3 +51,8 @@ Add an ML backend using the Label Studio UI
 * Click Add Model.
 * Type a Title for the model and provide the URL for the ML backend. For example, http://localhost:9090.
 * Click Validate and Save.
+
+## Credits
+
+- [pavtiger/label-studio-yolo-ml-backend](https://github.com/pavtiger/label-studio-yolo-ml-backend.git)
+
