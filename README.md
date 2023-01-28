@@ -54,6 +54,6 @@ Add an ML backend using the Label Studio UI
 
 ## Credits
 - [ultralytics/yolov5](https://github.com/ultralytics/yolov5.git)
-- [heartexlabs/label-studio-ml-backend](https://github.com/heartexlabs/label-studio-ml-backend.git))
+- [heartexlabs/label-studio-ml-backend](https://github.com/heartexlabs/label-studio-ml-backend.git)
 - [pavtiger/label-studio-yolo-ml-backend](https://github.com/pavtiger/label-studio-yolo-ml-backend.git)
 
