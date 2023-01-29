@@ -19,8 +19,19 @@ docker run -d -p 8080:8080 --restart=always --name label-studio -v $(pwd)/mydata
 * Sign up with an email address and password that you create.
 * Name the project, and if you want, type a description and select a color.
 * Click Data Import and upload the data files that you want to use. If you want to use data from a local directory
-* Click Labeling Setup and choose a template and customize the label names for your use case.
+* Click Labeling Setup and choose a template and customize the label names for your use case or using a custom configuration that you create from scratch using tags. 
 * Click Save to save your project.
+
+This is a custom configuration for object detections task.
+```shell
+<View>
+  <Image name="image" value="$image"/>
+  <Header value="RectangleLabels"/>
+  <RectangleLabels name="label" toName="image">
+    <Label value="person" predicted_values="person"/>
+  </RectangleLabels>
+</View>
+```
 
 ## Configure local storage
 
