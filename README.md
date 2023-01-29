@@ -1,7 +1,18 @@
 # Label Studio Yolov5 ML Backend
 This repo allow you tu use yolov5 models in label studio ml backend.
 
-> **_NOTE:_**  At the moment only auto labeling using pre-trained models is supported. Training not yet implemented.
+Run Label Studio on Docker and use local storage
+```shell
+docker pull heartexlabs/label-studio:latest
+docker run -it -p 8080:8080 -v $(pwd)/mydata:/label-studio/data \
+--env LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true \ 
+--env LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=/label-studio/files \ 
+-v $(pwd)/myfiles:/label-studio/files \
+heartexlabs/label-studio:latest label-studio
+
+#es.
+docker run -it -p 8080:8080 --name label-studio -v $(pwd)/mydata:/label-studio/data --env LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true --env LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=/label-studio/files -v /ai-data/project/datasets:/label-studio/files  heartexlabs/label-studio:latest label-studio
+```
 
 Clone repostory with submodules
 ```shell
@@ -42,7 +53,6 @@ label-studio-yolov5-backend
 docker run -it --name label-studio-yolov5-ml-backend -p 9091:9090 --gpus all --shm-size=8192M -v /ai-data/project/datasets/:/data/local-files -v /ai-data/project/LabelStudio/mydata/media/upload/:/data/upload label-studio-yolov5-backend
 ```
 
-
 ## Connecting to ML backend
 Add an ML backend using the Label Studio UI
 
@@ -51,6 +61,8 @@ Add an ML backend using the Label Studio UI
 * Click Add Model.
 * Type a Title for the model and provide the URL for the ML backend. For example, http://localhost:9090.
 * Click Validate and Save.
+
+> **_NOTE:_**  At the moment only auto labeling using pre-trained models is supported. Training not yet implemented.
 
 ## Credits
 - [ultralytics/yolov5](https://github.com/ultralytics/yolov5.git)
