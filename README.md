@@ -31,9 +31,9 @@ docker run -d -p 8080:8080 --restart=always --name label-studio -v $(pwd)/mydata
 * In the Storage Title field, type a name for the storage to appear in the Label Studio UI.
 * Specify an Absolute local path to the directory with your files. The local path must be an absolute path and include the LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT value.
 * Click Add Storage.
-```shell
+
 For example, if LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=/label-studio/files, then your local path must be /label-studio/files/MTT/frames2301/images
-```
+
 
 ## Set up Label Studio ML backend for yolov5
 Clone repostory with submodules
