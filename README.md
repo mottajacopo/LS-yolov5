@@ -1,5 +1,4 @@
-# Label Studio Yolov5 ML Backend
-This repo allow you tu use yolov5 models in label studio ml backend.
+# Label Studio with Yolov5 ML Backend
 
 ## Run Label Studio on Docker and use local storage
 ```shell
@@ -13,6 +12,25 @@ heartexlabs/label-studio:latest label-studio
 #es.
 docker run -d -p 8080:8080 --restart=always --name label-studio -v $(pwd)/mydata:/label-studio/data --env LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true --env LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=/label-studio/files -v /ai-data/project/datasets:/label-studio/files  heartexlabs/label-studio:latest label-studio
 ```
+
+## Connecting to Label Studio and create a project
+
+* Open the Label Studio UI at http://localhost:8080.
+* Sign up with an email address and password that you create.
+* Name the project, and if you want, type a description and select a color.
+* Click Data Import and upload the data files that you want to use. If you want to use data from a local directory
+* Click Labeling Setup and choose a template and customize the label names for your use case.
+* Click Save to save your project.
+
+## Configure local storage
+
+* Open Label Studio in your web browser.
+* For a specific project, open Settings > Cloud Storage.
+* Click Add Source Storage.
+* In the dialog box that appears, select Local Files as the storage type.
+* In the Storage Title field, type a name for the storage to appear in the Label Studio UI.
+* Specify an Absolute local path to the directory with your files. The local path must be an absolute path and include the LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT value. For example, if LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=/label-studio/files, then your local path must be /label-studio/files/dataset1
+* Click Add Storage.
 
 ## Set up Label Studio ML backend for yolov5
 Clone repostory with submodules
